@@ -1,0 +1,13 @@
+<launch>
+
+	<node name="modem_publisher" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="ttyACM0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+	</node>
+
+      <node name="modem_publisher" pkg="rospyd7a" type="modem_publisher.py">
+            <param name="dash7_port" type="str" value="ttyACM1"/>
+            <param name="dash7_baudrate" type="int" value="115200"/>
+      </node>
+
+</launch>

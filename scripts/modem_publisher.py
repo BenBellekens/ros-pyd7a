@@ -53,10 +53,10 @@ class modem_listener:
 
 if __name__ == '__main__':
     rospy.init_node('modem_publisher', log_level=rospy.INFO)
-    # port = rospy.get_param("~dash7_port")
-    # baudrate = rospy.get_param("~dash7_baudrate")
-    port = "/dev/ttyACM1"
-    baudrate = 115200
+    port = rospy.get_param("~dash7_port")
+    baudrate = rospy.get_param("~dash7_baudrate")
+    #port = "/dev/ttyACM1"
+    #baudrate = 115200
     verbose = True
     try:
         dash7_listener = modem_listener(port, baudrate, verbose)
