@@ -6,4 +6,5 @@ float64 rx_level
 float64 link_budget
 string channel_band
 string channel_class
+int64 channel_index
 int64 counter

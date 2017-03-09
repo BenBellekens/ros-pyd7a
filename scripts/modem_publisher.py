@@ -32,30 +32,31 @@ class modem_listener:
     def parse(self, message, cmd):
         rospy.loginfo("Parse Dash7 message")
         message.header.stamp    = rospy.Time.now()
-        message.header.frame_id = str(cmd.interface_status.operand.interface_status.addressee.id)
-        message.rx_address      = str(cmd.interface_status.operand.interface_status.addressee.id)
-        message.tx_address      = str(self.modem.uid)
+        message.header.frame_id = str(self.modem.uid)
+        message.rx_address      = str(self.modem.uid)
+        message.tx_address      = str(cmd.interface_status.operand.interface_status.addressee.id)
         message.rx_level        = cmd.interface_status.operand.interface_status.rx_level
         message.link_budget     = cmd.interface_status.operand.interface_status.link_budget
         message.channel_band    = cmd.interface_status.operand.interface_status.channel_header.channel_band.name
         message.channel_class   = cmd.interface_status.operand.interface_status.channel_header.channel_class.name
+        message.channel_index   = cmd.interface_status.operand.interface_status.channel_index
         message.counter         = self.counter
         self.counter += 1
         return message
 
     def listen(self):
         rospy.loginfo("Port %s with Baudrate %s", self.port, self.baudrate)
-        self.modem = Modem(self.port, self.baudrate, receive_callback=self.received_command_callback, show_logging=verbose)
+        self.modem = Modem(self.port, self.baudrate, receive_callback=self.received_command_callback, show_logging=self.verbose)
         self.modem.start_reading()
         while not rospy.is_shutdown():
             pass
 
 
 if __name__ == '__main__':
-    rospy.init_node('modem_publisher', log_level=rospy.INFO)
+    rospy.init_node('d7_rx_node', log_level=rospy.INFO)
     port = rospy.get_param("~dash7_port")
     baudrate = rospy.get_param("~dash7_baudrate")
-    #port = "/dev/ttyACM1"
+    #port = "/dev/ttyUSB1"
     #baudrate = 115200
     verbose = True
     try:
