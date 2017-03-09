@@ -4,13 +4,15 @@
 # Ben Bellekens, ben.bellekens@uantwerpen.be
 
 import rospy
+import tf
 import time
 from rospyd7a.msg import dash7
 import d7a
 from modem.modem import Modem
 
 class modem_listener:
-    def __init__(self, port, rate, verbose):
+    def __init__(self, name, port, rate, verbose):
+        self.name = name
         self.port = port
         self.baudrate = rate
         self.verbose = verbose
@@ -18,6 +20,18 @@ class modem_listener:
         self.counter = 1
         self.pub = rospy.Publisher('dash7', dash7, queue_size=1)
         self.pubrate = rospy.Rate(10)
+        self.location = []
+
+    def set_location(self, x, y, z):
+        self.location = [x, y, z]
+
+    def location_broadcast(self, msg):
+        br = tf.TransformBroadcaster()
+        br.sendTransform((self.location[0], self.location[1], self.location[2]),
+                         tf.transformations.quaternion_from_euler(0.0, 0.0, 0.0, ),
+                         msg.header.stamp,
+                         self.name,
+                         "base_link")
 
     def received_command_callback(self, cmd):
         print cmd
@@ -27,6 +41,7 @@ class modem_listener:
                 message = dash7()
                 message = self.parse(message, cmd)
                 self.pub.publish(message)
+                self.location_broadcast(message)
 
 
     def parse(self, message, cmd):
@@ -54,13 +69,18 @@ class modem_listener:
 
 if __name__ == '__main__':
     rospy.init_node('d7_rx_node', log_level=rospy.INFO)
+    name = rospy.get_name()
     port = rospy.get_param("~dash7_port")
     baudrate = rospy.get_param("~dash7_baudrate")
+    x_coor = rospy.get_param("~x_coor")
+    y_coor = rospy.get_param("~y_coor")
+    z_coor = rospy.get_param("~z_coor")
     #port = "/dev/ttyUSB1"
     #baudrate = 115200
     verbose = True
     try:
-        dash7_listener = modem_listener(port, baudrate, verbose)
+        dash7_listener = modem_listener(name, port, baudrate, verbose)
+        dash7_listener.set_location(x_coor, y_coor, z_coor)
         dash7_listener.listen()
     except rospy.ROSInterruptException:
         pass
