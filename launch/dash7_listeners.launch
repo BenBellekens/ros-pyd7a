@@ -1,13 +1,66 @@
 <launch>
 
-	<node name="modem_publisher_0" pkg="rospyd7a" type="modem_publisher.py">
+    <node name="base_modem_0" pkg="rospyd7a" type="modem_publisher.py">
 		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
 		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.0"/>
+		<param name="y_coor" type="double" value="0.16"/>
+		<param name="z_coor" type="double" value="0.43"/>
 	</node>
 
-    <node name="modem_publisher_1" pkg="rospyd7a" type="modem_publisher.py">
-        <param name="dash7_port" type="str" value="/dev/ttyUSB1"/>
-        <param name="dash7_baudrate" type="int" value="115200"/>
-    </node>
+	<node name="base_modem_1" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.055"/>
+		<param name="y_coor" type="double" value="-0.16"/>
+		<param name="z_coor" type="double" value="0.43"/>
+	</node>
 
+	<node name="base_modem_2" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.0"/>
+		<param name="y_coor" type="double" value="0.16"/>
+		<param name="z_coor" type="double" value="0.87"/>
+	</node>
+
+	<node name="base_modem_3" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.055"/>
+		<param name="y_coor" type="double" value="-0.16"/>
+		<param name="z_coor" type="double" value="0.87"/>
+	</node>
+
+    <node name="base_modem_4" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.055"/>
+		<param name="y_coor" type="double" value="0.16"/>
+		<param name="z_coor" type="double" value="0.43"/>
+	</node>
+
+	<node name="base_modem_5" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.0"/>
+		<param name="y_coor" type="double" value="-0.16"/>
+		<param name="z_coor" type="double" value="0.43"/>
+	</node>
+
+	<node name="base_modem_6" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.055"/>
+		<param name="y_coor" type="double" value="0.16"/>
+		<param name="z_coor" type="double" value="0.87"/>
+	</node>
+
+	<node name="base_modem_7" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.0"/>
+		<param name="y_coor" type="double" value="-0.16"/>
+		<param name="z_coor" type="double" value="0.87"/>
+	</node>
 </launch>
