@@ -1,0 +1,20 @@
+<launch>
+
+	<node name="base_modem_0" pkg="rospyd7a" type="modem_publisher.py">
+		<param name="dash7_port" type="str" value="/dev/ttyUSB0"/>
+		<param name="dash7_baudrate" type="int" value="115200"/>
+		<param name="x_coor" type="double" value="0.0"/>
+		<param name="y_coor" type="double" value="0.16"/>
+		<param name="z_coor" type="double" value="0.43"/>
+	</node>
+
+<!--
+	<node name="sensor_0_tf" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="base_link"/>
+      <param name="id_1" value="3191882256028378"/>
+      <param name="id_1_x" type="double" value="5.0"/>
+      <param name="id_1_y" type="double" value="0.0"/>
+      <param name="id_1_z" type="double" value="0.0"/>
+    </node>
+    -->
+</launch>
