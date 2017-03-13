@@ -15,11 +15,15 @@ node_3 = []
 node_4 = []
 node_5 = []
 node_6 = []
+node_7 = []
+node_8 = []
+node_9 = []
+node_10 = []
 
 def tf_broadcast_cb(data):
     br = tf.TransformBroadcaster()
     rospy.loginfo(data.tx_address)    
-    rospy.loginfo(node_1[0])
+    #rospy.loginfo(node_1[0])
     #receiving_frame = rospy.get_param('~receiving_frame')
     receiving_frame = "base_link"
     if len(node_1) > 0:
