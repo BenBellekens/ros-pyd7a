@@ -32,5 +32,11 @@
 		<param name="z_coor" type="double" value="0.87"/>
 	</node>
 
-
+	<node name="sensor_433_3" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="base_link"/>
+      <param name="id_1" type="str" value="3191882256028378"/>
+      <param name="id_1_x" type="double" value="5.0"/>
+      <param name="id_1_y" type="double" value="0.0"/>
+      <param name="id_1_z" type="double" value="0.0"/>
+    </node>
 </launch>

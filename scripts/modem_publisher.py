@@ -47,7 +47,7 @@ class modem_listener:
     def parse(self, message, cmd):
         rospy.loginfo("Parse Dash7 message")
         message.header.stamp    = rospy.Time.now()
-        message.header.frame_id = str(self.modem.uid)
+        message.header.frame_id = str(cmd.interface_status.operand.interface_status.addressee.id)
         message.rx_address      = str(self.modem.uid)
         message.tx_address      = str(cmd.interface_status.operand.interface_status.addressee.id)
         message.rx_level        = cmd.interface_status.operand.interface_status.rx_level
