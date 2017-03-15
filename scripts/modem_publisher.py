@@ -63,6 +63,7 @@ class modem_listener:
         rospy.loginfo("Port %s with Baudrate %s", self.port, self.baudrate)
         while True:
             try:
+		rospy.loginfo('make modem connection')
                 self.modem = Modem(self.port, self.baudrate, receive_callback=self.received_command_callback, show_logging=self.verbose)
                 self.modem.start_reading()
                 while not rospy.is_shutdown():
