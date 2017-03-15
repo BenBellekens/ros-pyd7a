@@ -61,11 +61,14 @@ class modem_listener:
 
     def listen(self):
         rospy.loginfo("Port %s with Baudrate %s", self.port, self.baudrate)
-        self.modem = Modem(self.port, self.baudrate, receive_callback=self.received_command_callback, show_logging=self.verbose)
-        self.modem.start_reading()
-        while not rospy.is_shutdown():
-            pass
-
+        while True:
+            try:
+                self.modem = Modem(self.port, self.baudrate, receive_callback=self.received_command_callback, show_logging=self.verbose)
+                self.modem.start_reading()
+                while not rospy.is_shutdown():
+                    pass
+            except Exception, e:
+                raise e            
 
 if __name__ == '__main__':
     rospy.init_node('d7_rx_node', log_level=rospy.INFO)
