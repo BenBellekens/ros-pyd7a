@@ -1,0 +1,165 @@
+<launch>
+
+<node name="sensor_433_1" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028328"/>
+      <param name="id_1_x" type="double" value="1.51"/>
+      <param name="id_1_y" type="double" value="0.974"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_2" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028353"/>
+      <param name="id_1_x" type="double" value="1.489"/>
+      <param name="id_1_y" type="double" value="-0.974"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_3" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028378"/>
+      <param name="id_1_x" type="double" value="3.922"/>
+      <param name="id_1_y" type="double" value="1.534"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_4" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028390"/>
+      <param name="id_1_x" type="double" value="3.941"/>
+      <param name="id_1_y" type="double" value="-1.540"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_5" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028368"/>
+      <param name="id_1_x" type="double" value="6.560"/>
+      <param name="id_1_y" type="double" value="1.528"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_6" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028316"/>
+      <param name="id_1_x" type="double" value="6.570"/>
+      <param name="id_1_y" type="double" value="-1.528"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_7" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028420"/>
+      <param name="id_1_x" type="double" value="9.901"/>
+      <param name="id_1_y" type="double" value="2.033"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_8" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028410"/>
+      <param name="id_1_x" type="double" value="10.077"/>
+      <param name="id_1_y" type="double" value="-1.783"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_9" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028380"/>
+      <param name="id_1_x" type="double" value="12.007"/>
+      <param name="id_1_y" type="double" value="-1.693"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_433_10" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028411"/>
+      <param name="id_1_x" type="double" value="11.868"/>
+      <param name="id_1_y" type="double" value="2.187"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+
+        <node name="sensor_868_1" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028237"/>
+      <param name="id_1_x" type="double" value="1.510"/>
+      <param name="id_1_y" type="double" value="0.974"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_868_2" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028826"/>
+      <param name="id_1_x" type="double" value="1.489"/>
+      <param name="id_1_y" type="double" value="-0.967"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+    <node name="sensor_868_3" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256030626"/>
+      <param name="id_1_x" type="double" value="3.922"/>
+      <param name="id_1_y" type="double" value="1.527"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+        <node name="sensor_868_4" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028224"/>
+      <param name="id_1_x" type="double" value="3.941"/>
+      <param name="id_1_y" type="double" value="-1.554"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+        <node name="sensor_868_5" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256029473"/>
+      <param name="id_1_x" type="double" value="6.560"/>
+      <param name="id_1_y" type="double" value="1.520"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+        <node name="sensor_868_6" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028287"/>
+      <param name="id_1_x" type="double" value="6.570"/>
+      <param name="id_1_y" type="double" value="-1.522"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+        <node name="sensor_868_7" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256030759"/>
+      <param name="id_1_x" type="double" value="10.077"/>
+      <param name="id_1_y" type="double" value="-1.777"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+        <node name="sensor_868_8" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028216"/>
+      <param name="id_1_x" type="double" value="9.901"/>
+      <param name="id_1_y" type="double" value="1.97"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+        <node name="sensor_868_9" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028986"/>
+      <param name="id_1_x" type="double" value="12.007"/>
+      <param name="id_1_y" type="double" value="-1.686"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+        <node name="sensor_868_10" pkg="rospyd7a" type="sensor_tf_publisher.py">
+      <param name="receiving_frame" value="odom"/>
+      <param name="id_1" type="str" value="3191882256028218"/>
+      <param name="id_1_x" type="double" value="11.868"/>
+      <param name="id_1_y" type="double" value="2.182"/>
+      <param name="id_1_z" type="double" value="0.819"/>
+    </node>
+
+
+</launch>
